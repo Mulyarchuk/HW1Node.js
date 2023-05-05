@@ -29,7 +29,7 @@ async function removeContact(contactId) {
   
 async function addContact(name, email, phone) {
     const contacts = await listContacts();
-    const contact = {id:nanoid(), name, email, phone} ;
+    const contact = {id:nanoid(),name, email, phone};
     contacts.push(contact);
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
     return contact;

@@ -25,7 +25,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      console.table(await addContact(id, name, email, phone));
+      console.table(await addContact( name, email, phone));
       break;
 
     case "remove":
